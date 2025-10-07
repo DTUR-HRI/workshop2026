@@ -1,156 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Workshop on Designing Transparent and Understandable Robots (D-TUR)</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-TUR Workshop – Designing Transparent and Understandable Robots | HRI ’26, Edinburgh, UK</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* background-image: url("placeholder_background.jpg"); */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.95;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: 20px;
+            padding: 20px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        .schedule {
+            display: none;
+        }
+        .jumbotron {
+            background-color: #ddffff;
+        }
+        .home-jumbotron {
+            background-color: #ddffff;
+        }
+        .organizer-img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .organizer-card {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
-
 <body>
-  <header>
-    <h1>Workshop on Designing Transparent and Understandable Robots (D-TUR)</h1>
-    <h3>HRI ’26, March 16–19, 2026, Edinburgh, Scotland, UK</h3>
-  </header>
 
-  <main>
-    <section id="about">
-      <h2>About the Workshop</h2>
-      <p>
-        In order for robots to act as an empowering tool in today’s society, it is necessary for users to understand what those robots can and cannot do. This can happen through the design of the robot, through external information such as signs and manuals, or through the interaction itself. With this workshop, we aim to provide a platform for participants who approach robot transparency from different angles to share and discuss their experiences.
-      </p>
-      <p>
-        In this workshop, participants will have the opportunity to deepen their knowledge of transparent and understandable robot interactions through two keynotes and paper presentations. In the second part of the workshop, the diverse backgrounds of participants will be brought together in interactive exercises that aim to address questions about topics such as how transparency can be used to reduce inequalities and empower society and other open problems in the field. The guided break-out sessions aim at giving participants the chance to reflect on the keynotes, paper presentations and their own work and to share those reflections with participants with other perspectives.
-      </p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">D-TUR Workshop @ HRI ’26</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('home')">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('schedule')">Schedule</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('cfp')">Call for Papers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('organizers')">Organizers</a></li>
+        </ul>
+    </div>
+</nav>
 
-      <h2>Background</h2>
-      <p>
-        In order for human-robot interaction (HRI) to empower society, people must know how to use and safely work around robots that they may interact with. As robots are deployed in our everyday lives, they will encounter novice users who do not have prior experience with robots. Currently, not everyone has easy access to robots, creating an inequality in familiarity with this technology. As they are not familiar with robots, the robot’s capabilities and behaviors might not be easy to understand, potentially leading to unsafe or inefficient interactions.
-      </p>
-      <p>
-        Various approaches have been used to make robots and their behavior understandable. Robots can be designed with affordances that establish expectations for their purpose and functionality. It is also possible to increase the legibility of robot behaviors, such as movements, to enable the human to infer the robot’s intents and goals. Other options include increasing the transparency of the system by providing the reasoning behind decisions or by increasing the legibility of robot actions, making the goal predictable, and by providing verbal explanations. A robot can also explain its behavior and capabilities through social clues, like speech, images, movement, or text. Transparency is not limited to the robot’s capabilities but also can include what it cannot do and can use various modalities such as behaviors and screens. Failure explanations help users understand the limits of robots so that they can learn how to prevent, diagnose, or recover from these failures.
-      </p>
-      <p>
-        Not only are there multiple approaches to consider when designing or integrating robots to work alongside people to promote an accurate understanding of robot behaviors, but there are also no standard methods to evaluate understanding and explanations in HRI. An effort has been made to bridge this gap by proposing a scale for measuring transparency. With our workshop, we aim to provide people with a platform to share their experiences and challenges with making systems transparent and understandable. Moreover, we aim to raise awareness of why it is important for robots to be understood if we want to use them to empower society.
-      </p>
-      <p>
-        The goal of this workshop is to connect people working on different aspects of making robots understandable. Additionally, it aims to provide the broader HRI audience with information on how they can make their robots more understandable to users and empower everyone to use them more easily.
-      </p>
-    </section>
+<div class="container" id="home">
+    <div class="jumbotron home-jumbotron">
+        <h1 class="display-4">Designing Transparent and Understandable Robots (D-TUR)</h1>
+        <p class="lead">Workshop at HRI ’26, March 16–19, 2026, Edinburgh, Scotland, UK</p>
+        <hr class="my-4">
 
-    <section id="cfp">
-      <h2>Call for Papers</h2>
-      <h3>Target Audience and Workshop Themes</h3>
-      <p>
-        We aim to bring together HRI researchers from different backgrounds to discuss open questions and novel work or ideas geared towards designing transparent and understandable robots. This includes a variety of topics, such as but not limited to:
-      </p>
-      <ul>
-        <li>Designing robots with affordances</li>
-        <li>Designing legible robot behaviors</li>
-        <li>Transparency through XAI or mechanistic interpretability</li>
-        <li>Understanding robot failures</li>
-        <li>Understanding robot intent</li>
-        <li>Understanding robot capability</li>
-        <li>Explanations in HRI</li>
-        <li>Metrics & evaluation methods for measuring understanding</li>
-        <li>Co-designing understandable robots with users</li>
-        <li>(Dis-)Advantages of making robots understandable</li>
-        <li>Personalization to improve understanding</li>
-        <li>Adapting the level of transparency based on context</li>
-      </ul>
-    </section>
+        <p>
+        As robots become increasingly autonomous and integrated into everyday human environments, 
+        understanding *how* and *why* they behave as they do is critical for establishing trust, 
+        safety, and effective collaboration. The **Designing Transparent and Understandable Robots (D-TUR)** workshop 
+        aims to bring together researchers interested in improving robot transparency and 
+        explainability across physical and social contexts of Human–Robot Interaction (HRI). 
+        This includes not only generating explanations for robot decisions and failures, 
+        but also designing *adaptive* explanation mechanisms that match human expectations and 
+        mental models during interaction.
+        </p>
 
-    <section id="schedule">
-      <h2>Workshop Format and Tentative Schedule</h2>
-      <p>
-        The half-day workshop will take place as a hybrid event. In-person attendance will be encouraged; we will offer a hybrid option to increase accessibility and reach. The workshop will consist of two keynotes, presentations for accepted papers, and interactive break-out sessions.
-      </p>
-      <h3>Tentative Schedule</h3>
-      <ul>
-        <li>09:00 - 09:05 Welcome and introduction to the workshop</li>
-        <li>09:05 - 09:45 Keynote 1 and Q&A</li>
-        <li>09:45 - 10:30 Paper presentations</li>
-        <li>10:30 - 10:50 Coffee break and networking</li>
-        <li>10:50 - 11:30 Keynote 2 and Q&A</li>
-        <li>11:30 - 12:15 Interactive break-out sessions</li>
-        <li>12:15 - 12:45 Discussing the break-out session results</li>
-        <li>12:45 - 13:00 Concluding remarks</li>
-      </ul>
-      <p>
-        Confirmed keynote speakers include <strong>Henny Admoni</strong> (Carnegie Mellon University) and <strong>Alessandra Rossi</strong> (University of Naples “Federico II”).
-      </p>
-    </section>
+        <p>
+        The workshop will explore design, perception, and evaluation of transparency and understandability in robots—bridging insights from 
+        cognitive science, social robotics, machine learning, and human–computer interaction. 
+        We encourage participation from both academia and industry, to foster interdisciplinary dialogue 
+        on creating robots that communicate intent, uncertainty, and reasoning processes in ways that are 
+        intuitive to diverse users.
+        </p>
 
-    <section id="organizers">
-      <h2>Organizers</h2>
+        <ul>
+            <li>Transparency, interpretability, and explainability in HRI</li>
+            <li>Designing adaptive explanation mechanisms for robot failures</li>
+            <li>User mental models and human trust calibration</li>
+            <li>Evaluation of robot explanations in physical collaboration</li>
+            <li>Multimodal and interactive explanation interfaces</li>
+            <li>Human perception of robot confidence, intent, and uncertainty</li>
+            <li>Cross-disciplinary approaches to robot transparency</li>
+        </ul>
+    </div>
+</div>
 
-      <div class="organizer">
-        <!-- <img src="images/placeholder.jpg" alt="Merle Reimann"> -->
-        <h3>Merle Reimann</h3>
-        <p>KTH Royal Institute of Technology, Sweden</p>
-        <p>Postdoctoral Researcher in the Robotics, Perception and Learning division. Researches how robots can communicate their capabilities to users through interaction.</p>
-      </div>
+<div class="container schedule" id="schedule">
+    <div class="jumbotron">
+        <h2>Tentative Schedule</h2>
+        <p>Date: March 16, 2026 (Half-day Workshop)</p>
+        <table border="1" cellpadding="6" cellspacing="0">
+            <tr><td>09:00 – 09:15</td><td>Welcome and Introduction</td></tr>
+            <tr><td>09:15 – 10:00</td><td>Keynote 1: Understanding Transparency in Human–Robot Collaboration</td></tr>
+            <tr><td>10:00 – 10:30</td><td>Contributed Talks (Session 1)</td></tr>
+            <tr><td>10:30 – 11:00</td><td>Coffee Break & Poster Session</td></tr>
+            <tr><td>11:00 – 11:45</td><td>Keynote 2: Adaptive Explanations and Human Trust Dynamics</td></tr>
+            <tr><td>11:45 – 12:15</td><td>Panel Discussion: Designing Understandable Robots for Real-World Contexts</td></tr>
+            <tr><td>12:15 – 12:30</td><td>Closing Remarks and Future Directions</td></tr>
+        </table>
+    </div>
+</div>
 
-      <div class="organizer">
-        <!-- <img src="images/placeholder.jpg" alt="Gregory LeMasurier"> -->
-        <h3>Gregory LeMasurier</h3>
-        <p>University of Massachusetts Lowell, USA</p>
-        <p>Ph.D. student focusing on enabling novices to understand robot failures and non-verbal robot intent communication.</p>
-      </div>
+<div class="container schedule" id="cfp">
+    <div class="jumbotron">
+        <h2>Call for Papers</h2>
+        <p>
+        We invite short paper submissions (2–4 pages) presenting original, ongoing, or position work 
+        on transparency, understandability, and explainability in human–robot interaction. 
+        Topics of interest include theoretical frameworks, experimental studies, design case studies, 
+        and applications of robot explanations in physical and social HRI.
+        </p>
 
-      <div class="organizer">
-        <!-- <img src="images/placeholder.jpg" alt="Wenxi Wu"> -->
-        <h3>Wenxi Wu</h3>
-        <p>King’s College London / Imperial College London, UK</p>
-        <p>Ph.D. student at the Centre for Doctoral Training in Safe & Trusted AI, researching explanations for motion planning failures.</p>
-      </div>
+        <h3>Target Audience</h3>
+        <p>
+        The D-TUR workshop targets researchers, designers, and practitioners from fields such as 
+        Human–Robot Interaction, Explainable AI, Robotics, Cognitive Science, and Human–Computer Interaction. 
+        We particularly welcome contributions from interdisciplinary teams interested in both technical 
+        and human-centered perspectives on robot transparency and adaptive explanations.
+        </p>
 
-      <div class="organizer">
-        <!-- <img src="images/placeholder.jpg" alt="Lennart Wachowiak"> -->
-        <h3>Lennart Wachowiak</h3>
-        <p>King’s College London / Imperial College London, UK</p>
-        <p>Ph.D. student focused on enabling robots to proactively explain their actions and select relevant information for users.</p>
-      </div>
+        <h3>Submission Guidelines</h3>
+        <p>
+        Manuscripts should be written in English and follow the ACM SIGCHI Extended Abstracts format. 
+        Submissions should be 2–4 pages (excluding references) and will undergo single-blind review. 
+        Accepted papers will be presented as short talks or posters, and included on the workshop website.
+        </p>
 
-      <div class="organizer">
-        <!-- <img src="images/placeholder.jpg" alt="Parag Khanna"> -->
-        <h3>Parag Khanna</h3>
-        <p>KTH Royal Institute of Technology, Sweden</p>
-        <p>Postdoctoral Researcher in the Robotics, Perception and Learning division. Works on human-robot collaboration, failure explanations, and adaptive transparency.</p>
-      </div>
+        <ul>
+            <li><strong>Submission opens:</strong> January 15, 2026</li>
+            <li><strong>Submission deadline:</strong> February 10, 2026</li>
+            <li><strong>Notification of acceptance:</strong> February 20, 2026</li>
+            <li><strong>Camera-ready deadline:</strong> March 1, 2026</li>
+            <li><strong>Workshop date:</strong> March 16, 2026</li>
+        </ul>
 
-      <div class="organizer">
-        <!-- <img src="images/placeholder.jpg" alt="Christian Smith"> -->
-        <h3>Christian Smith</h3>
-        <p>KTH Royal Institute of Technology, Sweden</p>
-        <p>Associate Professor researching physical human-robot interaction and robot learning in collaborative tasks.</p>
-      </div>
+        <p>
+        Please send your submissions or inquiries to: 
+        <a href="mailto:dtur.hri26@gmail.com">dtur.hri26@gmail.com</a>
+        </p>
+    </div>
+</div>
 
-      <div class="organizer">
-        <!-- <img src="images/placeholder.jpg" alt="Iolanda Leite"> -->
-        <h3>Iolanda Leite</h3>
-        <p>KTH Royal Institute of Technology, Sweden</p>
-        <p>Associate Professor focusing on human-centered AI and long-term human-robot interaction.</p>
-      </div>
+<div class="container schedule" id="organizers">
+    <div class="jumbotron">
+        <h2>Organizers</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="organizer-card">
+                    <!-- <img src="parag_placeholder.jpg" alt="Parag Khanna" class="organizer-img"> -->
+                    <h3>Parag Khanna</h3>
+                    <p>KTH Royal Institute of Technology, Sweden</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="organizer-card">
+                    <!-- <img src="davide_placeholder.jpg" alt="Davide Torielli" class="organizer-img"> -->
+                    <h3>Davide Torielli</h3>
+                    <p>Italian Institute of Technology, Italy</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="organizer-card">
+                    <!-- <img src="ziwei_placeholder.jpg" alt="Ziwei Wang" class="organizer-img"> -->
+                    <h3>Ziwei Wang</h3>
+                    <p>Lancaster University, United Kingdom</p>
+                </div>
+            </div>
+        </div>
 
-      <div class="organizer">
-        <!-- <img src="images/placeholder.jpg" alt="Martim Brandao"> -->
-        <h3>Martim Brandao</h3>
-        <p>King’s College London, UK</p>
-        <p>Lecturer (Assistant Professor) researching robot perception, planning, and interaction in uncertain environments.</p>
-      </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="organizer-card">
+                    <!-- <img src="angela_placeholder.jpg" alt="Angela Faragasso" class="organizer-img"> -->
+                    <h3>Angela Faragasso</h3>
+                    <p>FingerVision Inc., Japan</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="organizer-card">
+                    <!-- <img src="nikos_placeholder.jpg" alt="Nikos Tsagarakis" class="organizer-img"> -->
+                    <h3>Nikos Tsagarakis</h3>
+                    <p>Italian Institute of Technology, Italy</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="organizer-card">
+                    <!-- <img src="christian_placeholder.jpg" alt="Christian Smith" class="organizer-img"> -->
+                    <h3>Christian Smith</h3>
+                    <p>KTH Royal Institute of Technology, Sweden</p>
+                </div>
+            </div>
+        </div>
 
-      <div class="organizer">
-        <!-- <img src="images/placeholder.jpg" alt="Gerard Canal"> -->
-        <h3>Gerard Canal</h3>
-        <p>King’s College London, UK</p>
-        <p>Lecturer in autonomous systems studying explainable robotics, goal reasoning, and planning in assistive robot systems.</p>
-      </div>
-    </section>
-  </main>
+        <p><strong>Workshop Contact:</strong> <a href="mailto:dtur.hri26@gmail.com">dtur.hri26@gmail.com</a></p>
+    </div>
+</div>
 
-  <footer>
-    <p>&copy; 2025 D-TUR Workshop | HRI ’26, Edinburgh, Scotland</p>
-  </footer>
+<div class="footer">
+    <p>&copy; 2026 D-TUR Workshop @ HRI ’26, Edinburgh, Scotland, UK. All rights reserved.</p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+    function showSection(sectionId) {
+        document.querySelectorAll('.container').forEach(function(section) {
+            section.style.display = 'none';
+        });
+        document.getElementById(sectionId).style.display = 'block';
+    }
+    showSection('home');
+</script>
 </body>
 </html>
