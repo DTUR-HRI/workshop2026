@@ -46,23 +46,46 @@
             text-align: center;
             margin-bottom: 30px;
         }
+        .nav-link.active {
+            font-weight: bold;
+        }
+        .summary-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        .figure-caption {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        .map-img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">D-TUR Workshop @ HRI ’26</a>
+    <a class="navbar-brand" href="#home">D-TUR Workshop @ HRI ’26</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('home')">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('schedule')">Schedule</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('keynote')">Keynote Speakers</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('cfp')">Call for Papers</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('acceptedpapers')">Accepted Papers</a></li>
-            <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('organizers')">Organizers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#home" data-section="home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#schedule" data-section="schedule">Schedule</a></li>
+            <li class="nav-item"><a class="nav-link" href="#keynote" data-section="keynote">Keynote Speakers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#cfp" data-section="cfp">Call for Papers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#acceptedpapers" data-section="acceptedpapers">Accepted Papers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#organizers" data-section="organizers">Organizers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#summary" data-section="summary">Workshop Summary</a></li>
         </ul>
     </div>
 </nav>
@@ -345,6 +368,71 @@
 </div>
 
 
+<div class="container schedule" id="summary">
+  <div class="jumbotron">
+    <h2>Workshop Summary</h2>
+    <p class="lead">Designing Transparent and Understandable Robots (D-TUR) — HRI '26, Edinburgh, Scotland, UK.</p>
+    <hr class="my-4">
+
+    <p>
+      Beyond the keynotes and paper presentations, we ran an interactive discussion section at the Workshop on
+      Designing Transparent and Understandable Robots at HRI&nbsp;'26 in Edinburgh.
+    </p>
+
+    <p>
+      We split the 60 workshop participants into small groups of approximately five people. This allowed participants
+      to make new connections and facilitated interactions between researchers from academia and industry at various
+      stages in their careers. Halfway through the free-discussion times new groups were formed to encourage discussing
+      with more people. Participants were encouraged to add their group's thoughts and ideas to an online discussion
+      board, where they could also leave comments and ask clarification questions.
+    </p>
+
+    <img src="wordcloud.png" alt="Word cloud of the terms most frequently used on the workshop's online discussion board" class="summary-img">
+    <p class="figure-caption">Word cloud based on the online discussion board.</p>
+
+    <h3>Recurring Themes</h3>
+    <p>Three themes occurred most commonly across people's posts.</p>
+    <ul>
+      <li>
+        <strong>User-centered explanations.</strong> Many discussed how explanations can be made user-centered.
+        For example, how much technical detail is necessary to allow users to critically assess a robot's capabilities?
+        Different participants highlighted the importance of considering a user's expertise level, domain context,
+        cognitive load, timing, and cultural differences when providing an explanation.
+      </li>
+      <li>
+        <strong>Anthropomorphism and non-verbal cues.</strong> There was a lively debate about the use and pitfalls of
+        anthropomorphisms and non-verbal cues for making robot behavior more legible.
+      </li>
+      <li>
+        <strong>LLMs as explainers.</strong> LLMs are increasingly used to explain things to users, for example, by
+        summarizing otherwise technical-sounding logs. While this offers new opportunities to make explanations
+        user-friendly, it also carries considerable risks: hallucinations, false expectations about robot capabilities,
+        and non-deterministic outputs.
+      </li>
+    </ul>
+
+    <img src="discussion-themes.png" alt="Chart titled 'What came up most?' showing the number of discussion notes per theme: user-centred transparency, non-verbal / embodiment, LLMs, domain &amp; context, technical interpretability, and evaluation / deployment" class="summary-img">
+    <p class="figure-caption">Number of discussion-board notes per theme.</p>
+
+    <h3>Open Questions</h3>
+    <p>
+      During the discussion, workshop participants not only found answers and exchanged ideas, but also raised new
+      questions:
+    </p>
+    <ul>
+      <li>How much mechanistic interpretability is actually useful?</li>
+      <li>How honest should robots be?</li>
+      <li>How realistic must evaluations become before we can trust findings to generalize?</li>
+    </ul>
+
+    <p>
+      We hope to facilitate further discussions on these topics in future iterations of our workshop on Designing
+      Transparent and Understandable Robots.
+    </p>
+  </div>
+</div>
+
+
 <div class="footer">
     <p>&copy; 2026 D-TUR Workshop @ HRI '26, Edinburgh, Scotland, UK. All rights reserved.</p>
 </div>
@@ -353,13 +441,75 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script>
-    function showSection(sectionId) {
-        document.querySelectorAll('.container').forEach(function(section) {
-            section.style.display = 'none';
+    // Sections that can be linked to directly, e.g. index.html#schedule
+    var SECTIONS = ['home', 'schedule', 'keynote', 'cfp', 'acceptedpapers', 'organizers', 'summary'];
+    var DEFAULT_SECTION = 'home';
+
+    var PAGE_TITLES = {
+        home: 'Home',
+        schedule: 'Schedule',
+        keynote: 'Keynote Speakers',
+        cfp: 'Call for Papers',
+        acceptedpapers: 'Accepted Papers',
+        organizers: 'Organizers',
+        summary: 'Workshop Summary'
+    };
+    var BASE_TITLE = "D-TUR Workshop – Designing Transparent and Understandable Robots | HRI '26, Edinburgh, UK";
+
+    function showSection(sectionId, updateHash) {
+        if (SECTIONS.indexOf(sectionId) === -1) {
+            sectionId = DEFAULT_SECTION;
+        }
+
+        SECTIONS.forEach(function(id) {
+            var el = document.getElementById(id);
+            if (el) {
+                el.style.display = (id === sectionId) ? 'block' : 'none';
+            }
         });
-        document.getElementById(sectionId).style.display = 'block';
+
+        // Highlight the active menu entry
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+            if (link.getAttribute('data-section') === sectionId) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        document.title = (sectionId === DEFAULT_SECTION)
+            ? BASE_TITLE
+            : PAGE_TITLES[sectionId] + ' | ' + BASE_TITLE;
+
+        // Keep the address bar in sync so the current tab can be copied/shared
+        if (updateHash !== false && window.location.hash !== '#' + sectionId) {
+            if (window.history && window.history.replaceState) {
+                window.history.replaceState(null, '', '#' + sectionId);
+            } else {
+                window.location.hash = sectionId;
+            }
+        }
+
+        // Collapse the mobile menu after a selection
+        if (window.jQuery) {
+            jQuery('#navbarNav').collapse('hide');
+        }
+
+        window.scrollTo(0, 0);
     }
-    showSection('home');
+
+    function sectionFromHash() {
+        return (window.location.hash || '').replace(/^#/, '');
+    }
+
+    function syncFromHash() {
+        showSection(sectionFromHash(), false);
+    }
+
+    window.addEventListener('hashchange', syncFromHash);
+
+    // Show the section the URL points at on first load
+    syncFromHash();
 </script>
 </body>
 
