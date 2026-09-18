@@ -83,10 +83,10 @@
             <li class="nav-item"><a class="nav-link" href="#schedule" data-section="schedule">Schedule</a></li>
             <li class="nav-item"><a class="nav-link" href="#keynote" data-section="keynote">Keynote Speakers</a></li>
             <li class="nav-item"><a class="nav-link" href="#cfp" data-section="cfp">Call for Papers</a></li>
-            <li class="nav-item"><a class="nav-link" href="#acceptedpapers" data-section="acceptedpapers">Accepted Papers</a></li>
             <li class="nav-item"><a class="nav-link" href="#organizers" data-section="organizers">Organizers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#acceptedpapers" data-section="acceptedpapers">Accepted Papers</a></li>
             <li class="nav-item"><a class="nav-link" href="#summary" data-section="summary">Workshop Summary</a></li>
-        </ul>
+          </ul>
     </div>
 </nav>
 
@@ -268,22 +268,61 @@
 
 <div class="container schedule" id="acceptedpapers">
     <div class="jumbotron">
-        <h2>Accepted Papers</h2>
+        <h1>Accepted Papers</h1>
+
+        <h2><a href="https://openreview.net/forum?id=cWyWphCp0E">Schema-Based Understandability in HRI: A Cognitive Framework</a></h2>
+        <p>
+        Robots are entering hospitals, airports, classrooms and homes, yet a persistent barrier to effective human–robot interaction is often not capability itself, but whether people can make sense of robot behaviour quickly enough to coordinate with it. Prevailing work in HRI and explainable AI has largely treated this as an information-disclosure problem: the assumption is that revealing more of a system’s internal reasoning will improve understanding. We argue that this framing overlooks how people interpret behaviour under real-time constraints. Drawing on cognitive schema theory, we define robot understandability as the user’s ability to form a timely, workable interpretation of what the robot is doing, sufficient to anticipate what it will do next and respond appropriately, without access to its internal decision process. We propose a schema-alignment framework organised around four interdependent schemas that structure social sensemaking: context, role, procedure and strategy. Across case studies in embodied social robotics and large language model (LLM) interaction, we show that coordination breakdowns - pauses, errors, and interactional repairs - arise when system cues fail to support the schemas users rely on. We use LLM interaction as a useful comparison because it removes the demands of embodiment and helps isolate breakdowns that may reflect more general processes of sensemaking. At the same time, the comparison has clear limits: embodied robots introduce additional demands, including coordination in shared physical space and the interpretation of nonverbal cues, such as gaze and gesture. Together, these arguments reframe understandability as a problem of interactional cueing rather than information access, and provide a psychologically grounded basis for robot design.
+        </p>
+
+        <h2><a href="https://openreview.net/forum?id=jaUUAftmbe">Clap Twice for Trust: How Framing Shapes Perceived Trustworthiness in VR-mediated Industrial Human-Robot Interaction(Link)</a></h2>
+        <p>
+        Trust is a crucial element in industrial human-robot interaction, yet little is known about how initial system descriptions shape perceived trustworthiness of the system, not only before use. Trans- parency about a system’s capabilities is crucial for reaching appro- priate reliance and perceived trustworthiness. This paper under- lines the importance of what users are told about a system before their first contact. This information shapes their expectations about the robot and early reliance. Thus, this study investigates how the verbal framing of an industrial robot—either as a low-capability prototype or a high-capability advanced technology—shapes per- ceived trustworthiness of the system. Utilizing a VR simulation of a poultry packing robot, participants (N=21) interacted with an iden- tical system. Notably, participants working with the high-capability framing rated the system as significantly more competent, showed higher reliability ratings, and also tended to express trusting be- havior sooner than those interacting with the system framed as a low-capability prototype. The results show that communicated competences affect perceived trustworthiness and trusting behavior in a simulated, VR-mediated industrial human-robot interaction. Based on those findings, we argue for the relevance of proper fram- ing, as, e.g., improper framing poses a risk of a miscalibration when system performance does not match its framing. Framing, thus, we argue, is an under-valued dimension of evaluating trustworthiness in (industrial) HRI.
+        </p>
+
+        <h2><a href="https://openreview.net/forum?id=ahAIrZ9Bph">Towards a Framework for Studying Alignment Drift in Multi-Turn HRI (Link)</a></h2>
+        <p>
+        Foundation models are increasingly integrated into autonomous and social robots where behavior often emerges over extended voice-based human–robot interaction rather than from isolated, single-prompt instructions through text-based interfaces. Large Language Model (LLM) alignment refers to the aim of ensuring that models adhere to human preferences and restrictions, producing outputs that are helpful, honest and harmless.
+
+        Many existing model alignment techniques are still primarily evaluated for LLMs in single-turn settings, in multi-turn adversarial contexts, or in text-based chatbot scenarios. These provide limited insight into how model alignment is sustained under realistic long-term human-robot interactions, where conversational history and social dynamics shape future model behavior.
+
+        This paper examines current methodological challenges for studying alignment drift in long-term human-robot interactions. We argue that existing multi-turn evaluation techniques primarily focus on adversarial jailbreak scenarios, providing limited insight into how alignment may shift gradually through naturalistic, feedback-driven interaction. To address this gap, we propose a multi-agent framework for generating synthetic, HRI-focused multi-turn conversations. Using the resulting data, we aim to study alignment drift at the representation-level by modeling each interaction as a trajectory in activation space and analyzing turn-by-turn dynamics. By linking observable conversational behavior to internal representational changes, the approach aims to provide methods for improving transparency and interpretability in long-term human–robot interaction with generative models.
+        </p>
+
+        <h2><a href="https://openreview.net/forum?id=wFs8zfVQTp">Adapting explanations’ level of detail in a longitudinal in-the-wild office delivery robot: Ongoing results(Link)</a></h2>
+        <p>
+        We present an ongoing longitudinal in-the-wild study of an office delivery robot that adapts the level of detail of its explanations to users of failure or unexpected events. We compare three explanation strategies: minimal “what happened” explanations, fully detailed including “what + why” reasons, and a personalised variant that tailors detail based on tracked user knowledge. Additionally, some users can request on‑demand extra follow-up explanations. Ongoing results from the first two weeks indicate that personalised explanations preserve both subjective and objective understanding while providing a level of detail closer to correct when compared to fully detailed explanations. Moreover, users who receive personalised explanations request fewer extra follow-up explanations compared to the group receiving minimal explanations. Full study results will confirm these results and provide their evolution through the next 2 weeks of deployment.
+        </p>
+
+        <h2><a href="https://openreview.net/forum?id=pX5ztNGY2O">Don't Go Breaking My Trust: A Taxonomy of Interaction Failures for Transparent Robots(Link)</a></h2>
+        <p>
+        As robots become integrated into everyday environments, interaction failures are inevitable. However, current robotics design often treats failures as technical bugs rather than interactive mistakes. When these errors are presented in technical terms, users might not be able to understand them, reducing trust and the ease of the interaction. To address this, we present a preliminary, multidimensional taxonomy of HRI failures. Based on team brainstorming and literature, our framework classifies failures across three core system capabilities: Perception, Cognition, and Execution. Crucially, it attributes these failures not solely to the robot, but also to human and environmental factors, while assessing their impact on user trust and safety. By pinpointing the exact nature and origin of an error, this taxonomy provides the vocabulary needed to equip robots with targeted, context-aware explanations, advancing the design of transparent and understandable human-robot interaction.
+        </p>
+
+        <h2><a href="https://openreview.net/forum?id=MD48B21HJv">Designing for Transparency in HRI: A Dashboard and Custom Hardware for Mechanistic Interpretability(Link)</a></h2>
+        <p>
+        As embodied AI systems transition from deterministic automation to fluid decision-making driven by systems such as Vision-Language-Action (VLA) models, the inherent opacity of these "black box" systems creates significant barriers to safe and effective human-robot interaction. This paper argues that transparency should not be a post-hoc addition, but a foundational design constraint integrated into the robot's physical and digital architecture. We present a humanoid demonstrator built on the Unitree G1 platform that embodies this holistic design philosophy. Our approach combines custom industrial hardware, including a specialised head unit with a Face User Interface (Face UI) for social signaling, with a real-time digital dashboard that translates complex AI reasoning into natural language and visualises the perception-to-actuation pipeline. To evaluate the efficacy of this multi-layered transparency design, we conducted a user study (N=10) comparing the fully transparent system against a baseline lacking the social interface and dashboard. Results indicate that our architecture improved transparency and understandability of the robot during interaction. These findings suggest that tailoring transparency mechanisms to specific user contexts is critical for the successful deployment of autonomous systems in shared human spaces.
+        </p>
+
+        <h2><a href="https://openreview.net/forum?id=TvWkgbqg7Q">The ERROR-MM Project: Exploring Robotlike Robot Behaviours in Users’ Mental Models(Link)</a></h2>
+        <p>
+        Design aims to align the user's mental model with the actual behaviour of a device to reduce the gap between user expectations and observed behaviour. In robotics, because of the anthropomorphic attributions that humans make towards robotic machines, humanlikeness has been one of the main heuristics to guide the design of robots, regarding their embodiment as well as their behaviours. Although humanlike design has many proven advantages, it also comes with disadvantages, such as being potentially deceitful regarding the robot's true capabilities. Recently, a new paradigm of robomorphism has been proposed that speculates on the attribution of robotlikeness to things. The ERROR-MM project will explore this novel idea of robotlikeness and test its effect on the accuracy of human mental models of robots. Specifically, starting with movement, as it is the basis of any robotic behaviour, the project aims to test the hypothesis that a robot employing robotlike behaviours will lead humans to form better mental models of a robot's true capabilities than a robot that employs humanlike behaviours.
+        </p>
+
+        <h2><a href="https://openreview.net/forum?id=Hvvp62TDrc">Dance2Hesitate: A Multi-Modal Dataset of Dancer-Taught Hesitancy for Understandable Robot Motion(Link)</a></h2>
+        <p>
+        In human-robot collaboration, a robot's expression of hesitancy is a critical factor that shapes human coordination strategies, attention allocation, and safety-related judgments. However, designing \textsl{hesitant} robot motion that generalizes is challenging because the observer's inference is highly dependent on embodiment and context. To address these challenges, we introduce and open-source a multi-modal, dancer-generated dataset of \textsl{hesitant} motion where we focus on specific context-embodiment pairs (i.e., manipulator/ human upper-limb approaching a Jenga Tower, and anthropomorphic whole body motion in free space). The dataset includes (i) kinesthetic teaching demonstrations on a Franka Emika Panda reaching from a fixed start configuration to a fixed target (a Jenga tower) with three graded hesitancy levels (slight, significant, extreme) and (ii) synchronized RGB-D motion capture of dancers performing the same reaching behavior using their upper limb across three hesitancy levels, plus full human body sequences for extreme hesitancy. We further provide documentation to enable reproducible benchmarking across robot and human modalities. Across all dancers, we obtained 70 unique whole-body trajectories, 84 upper limb trajectories spanning over the three hesitancy levels, and 66 kinesthetic teaching trajectories spanning over the three hesitancy levels. The dataset can be accessed here: https://brsrikrishna.github.io/Dance2Hesitate/.
+        </p>
+
+        <h2><a href="https://openreview.net/forum?id=7tTozAccA8">MEMOR-E: A Personalized Assistive Robotic Support System for Alzheimer’s Care(Link)</a></h2>
+        <p>
+        Alzheimer’s disease is a neurodegenerative disorder characterized by progressive declines in memory and language that reduce independence in daily life, motivating the development of socially assistive robotic support. This paper presents MEMOR-E, a mobile quadruped robot equipped with an interactive tablet interface designed to assist patients and caregivers through medication reminders, routine guidance, memory-oriented interactions, and companionship. We evaluate the feasibility of fine-tuning large language models (LLMs) to emulate stage-consistent cognitive behavior and interpret responses across standard neuropsychological language tasks using audio transcriptions from 235 Alzheimer’s patients along with synthetically generated healthy controls. Additionally, we investigate the use of in-context learning (ICL), where a second LLM generates domain- and severity-level cognitive error summaries. Our results show that MEMOR-E can produce stage-aware, non-diagnostic cognitive summaries that support personalized assistive interactions, while explainable AI mechanisms translate model outputs into transparent, human-readable evidence to enable caregiver oversight and trustworthy human–robot interaction.
+        </p>
         
+        <h2><a href="https://openreview.net/forum?id=UcksEKm0Gr">Automatic Early Detection of Explanation Needs in Human–Robot Interaction(Link)</a></h2>
         <p>
-        Here is a list of accepted papers presented during the workshop as lightning talks:
+        Enabling robots to display the reasoning behind decisions requires them to detect when explanations are needed by users. A crucial driver of explanation need is that it often manifests implicitly: users exhibit behavioural signals indicating misalignment well before they explicitly request an explanation. Psychological studies show that in human interactions, such needs are sensed through multimodal cues and addressed through the co-construction of explanations in real time. Building on this, we introduce an approach for the early detection of explanation needs in HRI. Our method recognises when an explanation is likely to become necessary, enabling robots to act proactively. We evaluate the approach on an existing HRI dataset using features describing facial expressions, body movement, and vocal behaviour, combined with time-series classification techniques. Our results show that different classes of learning algorithms (unsupervised anomaly-based methods and supervised classification models) offer complementary strengths for detecting explanation needs. In particular, unsupervised methods enable early warning signals when labels are unavailable, while supervised models provide stronger discrimination (AUROC 0.7) when annotated data is available. We discuss the implications of these findings for the development of explanation-capable robots and outline future directions for proactive explanations in HRI.
         </p>
-
-        <h1>Paper 1 (Link)</h1>
-        <p>
-        Abstract
-        </p>
-
-        <h1>Paper 2(Link)</h1>
-        <p>
-        Abstract 2
-        </p>
-
     </div>
 </div>
 
